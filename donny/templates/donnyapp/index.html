@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'partials/base.html' %}
 {% load static %}
 {% block content %}
 <body class="home">
@@ -25,11 +25,11 @@
             <source srcset="images/hero-600.jpg" media="(max-width: 600px)">
             <img src="images/hero-900.jpg" alt="looking into the distance">
         </picture> -->
-
+    {% include 'partials/nav.html' %}
     <section>
       <h2 class="hidden">section 1</h2>
         <article class="panel">
-            <div class="image-wrapper"><img src="{{'img/shoe.webp'}}" alt="donny's shoe"></div>
+            <div class="image-wrapper"><img src="{% static 'img/shoe.webp' %}" alt="donny's shoe"></div>
             <div class="text-wrapper">
               <h2>Why go with me?</h2>
                 <p>Have you ever had your pictures taken by an NBA player? Especially one as attractive as me? 
@@ -53,7 +53,7 @@
           <div class="cards">
             <div class="card">
               <a>
-                <img src="{{'img/hoop.jpg'}}" width="400" height="400"
+                <img src="{% static 'img/hoop.jpg' %}" width="400" height="400"
                   alt="basketball hoop">
                 <p class="overlay">
                   My Dinner
@@ -62,7 +62,7 @@
             </div>
             <div class="card">
               <a>
-                <img src="{{'img/palms.jpg'}}" width="400" height="400"
+                <img src="{% static 'img/palms.jpg' %}" width="400" height="400"
                   alt="hoop in the palms">
                 <p class="overlay">
                   My Paradise
@@ -71,7 +71,7 @@
             </div>
             <div class="card">
               <a>
-                <img src="{{'img/courtgray.jpg'}}" width="400" height="400"
+                <img src="{% static 'img/courtgray.jpg' %}" width="400" height="400"
                   alt="street ball">
                 <p class="overlay">
                   My Playground
@@ -80,7 +80,7 @@
             </div>
             <div class="card">
               <a>
-                <img src="{{'img/stadium.jpg'}}" width="400" height="400"
+                <img src="{% static 'img/stadium.jpg' %}" width="400" height="400"
                   alt="stadium">
                 <p class="overlay">
                   My Home
